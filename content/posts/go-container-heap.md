@@ -1,6 +1,6 @@
 +++
 title = "container/heap包使用指南"
-description = "本文基于官方文档介绍 golang 标准库中提供的堆/优先队列的使用方法."
+description = "本文基于官方文档介绍 golang 标准库中提供的堆/优先队列的使用方法。"
 date = 2022-06-28
 [taxonomies]
 tags= ["Queue", "PriorityQueue", "GoLang"]
