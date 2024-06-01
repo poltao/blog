@@ -1,4 +1,0 @@
-[submodule "themes/inky"]
-	path = themes/inky
-	url = git@github.com:jimmyff/zola-inky.git
-	branch = 49840c7b71cbacbdce578c80e539132bedc63c06
