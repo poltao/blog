@@ -3,7 +3,7 @@ title = "基于腾讯云cvm的云原生环境搭建"
 description = "基于腾讯云cvm的云原生环境搭建，所有操作基于腾讯云 cvm 实例。"
 date = 2021-12-14
 [taxonomies]
-tags= ["Linux", "VIM", "Commitizen", "NodeJS"]
+tags = ["Linux", "VIM", "Commitizen", "NodeJS"]
 +++
 
 具体配置如下，操作系统为 TencentOS Server 3.1：:smile:
@@ -153,3 +153,6 @@ source ~/.bashrc
 npm install -g commitizen
 echo '{ "path": "cz-conventional-changelog" }' >> ~/.czrc
 ```
+
+**Pro tip:** You can use all the git commit options with <font color='red'>git cz</font>. For example: <font color='red'>git cz
+--signoff.</font>
