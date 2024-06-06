@@ -54,7 +54,7 @@ MySQL 拿到一个查询请求后，会先到查询缓存看看，之前是不�
 
 好在 `MySQL` 也提供了这种“按需使用”的方式。你可以将参数 `query_cache_type `设置成 `DEMAND`，这样对于默认的 SQL 语句都不使用查询缓存。而对于你确定要使用查询缓存的语句，可以用 `SQL_CACHE` 显式指定，像下面这个语句一样：
 
-```shell
+```bash
 mysql> select SQL_CACHE * from T where ID=10；
 ```
 
@@ -70,7 +70,7 @@ mysql> select SQL_CACHE * from T where ID=10；
 
 优化器是在表里面有多个索引的时候，决定使用哪个索引；或者在一个语句有多表关联（join）的时候，决定各个表的连接顺序。比如你执行下面这样的语句，这个语句是执行两个表的 join：
 
-```shell
+```bash
 mysql> select * from t1 join t2 using(ID)  where t1.c=10 and t2.d=20;
 ```
 
@@ -129,7 +129,7 @@ ERROR 1142 (42000): SELECT command denied to user 'b'@'localhost' for table 'T'
 序锁定资源时，就可能会产生死锁。多个事务同时锁定同一个资源时，
 也会产生死锁。例如，下面两个事务同时处理 `StockPrice` 可能产生死锁：
 
-```shell
+```bash
 # 事务1
 START TRANSACTION;
 UPDATE StockPrice SET close = 45.50 WHERE stock_id = 4 and date = '2002-05-01';
