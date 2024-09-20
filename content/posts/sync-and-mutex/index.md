@@ -1,6 +1,6 @@
 +++
 title = "Send & Mutex: Misconceptions about Send"
-description = "【翻译✍️】在 Rust 中，想要实现一个类型的值在不同的线程或者异步任务中正常使用（确切的来说应该是无data race的读写），该类型必须实现两个标记 Trait: Send+Sync。而作者这篇文章旨在通过一系列的例子，来指明在某种程度上我们对 Send Trait 存在的误解，即 Send 应该指的：是不同的线程在不同的时间安全的使用；而不是我们下意识认为的：将一个类型的值从一个线程发送到另外一个线程。借此回答了作者在 Reddit 上看到的一个有趣的问题：为什么 Mutex<T> 想要保证线程安全就必须确保类型 T 实现了 Send Trait。"
+description = "【翻译】在 Rust 中，想要实现一个类型的值在不同的线程或者异步任务中正常使用（确切的来说应该是无data race的读写），该类型必须实现两个标记 Trait: Send+Sync。而作者这篇文章旨在通过一系列的例子，来指明在某种程度上我们对 Send Trait 存在的误解，即 Send 应该指的：是不同的线程在不同的时间安全的使用；而不是我们下意识认为的：将一个类型的值从一个线程发送到另外一个线程。借此回答了作者在 Reddit 上看到的一个有趣的问题：为什么 Mutex<T> 想要保证线程安全就必须确保类型 T 实现了 Send Trait。"
 date = 2024-06-04
 [taxonomies]
 tags = ["Rust", "Mutex", "Trait", "Translate"]
@@ -12,7 +12,7 @@ tags = ["Rust", "Mutex", "Trait", "Translate"]
 
 ## 1. 背景介绍
 
-在 Rust 中，想要实现一个类型的值在不同的线程或者异步任务中正常使用（确切的来说应该是无 data race 的读写），该类型必须实现两个标记
+&#x2003;在 Rust 中，想要实现一个类型的值在不同的线程或者异步任务中正常使用（确切的来说应该是无 data race 的读写），该类型必须实现两个标记
 Trait: Send+Sync。而作者这篇文章旨在通过一系列的例子，来指明在某种程度上我们对 Send Trait 存在的误解，即 Send
 应该指的：是不同的线程在不同的时间安全的使用；而不是我们下意识认为的：将一个类型的值从一个线程发送到另外一个线程。借此回答了作者在
 Reddit 上看到的一个有趣的问题：<font color=red>为什么 Mutex\<T\> 想要保证线程安全就必须确保类型 T 实现了 Send Trait？</font>
