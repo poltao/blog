@@ -53,7 +53,7 @@ echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bashrc
 
 - 编写 pb 文件 helloworld.proto
 
-```protobuf
+```proto
 syntax = "proto3";
 
 option go_package = "github.com/botao/helloworld";
@@ -204,6 +204,6 @@ func main() {
 ```
 
 - 执行测试
-  ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/9fd702d41b034d7a0af6a1346a8ff514.png)
+  ![grpc-test](grpc_test.png)
 - 代码结构
-  ![在这里插入图片描述](https://i-blog.csdnimg.cn/blog_migrate/06707b392a19bac4166bdfcb06609a4f.png)
+  ![struct](struct.png)
