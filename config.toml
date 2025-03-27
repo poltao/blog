@@ -3,7 +3,7 @@ title = "poltao"
 description = "吾心如花木，向阳而生，虽盛衰荣枯之异，然究终不离其性。"
 
 # https://www.getzola.org/documentation/getting-started/configuration/
-base_url = "https://poltao.github.io/blog/"
+base_url = "https://poltao.github.io/blog"
 compile_sass = true
 build_search_index = true
 # note: Chinese and Japanese search indexing is not included.
